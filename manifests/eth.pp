@@ -17,6 +17,7 @@
 # @param name
 #   DEVICE is taken from this variable.
 #
+# @param autoconnect_slaves
 # @param auto_discover_mac
 #   Determine whether or not the system should try and auto-discover a MAC
 #   address for the interface specified.
@@ -121,6 +122,7 @@
 #
 define network::eth (
   Optional[Boolean]                 $arp                              = undef,
+  Optional[Boolean]                 $autoconnect_slaves               = undef,
   Boolean                           $auto_discover_mac                = true,
   Boolean                           $bonding                          = false,
   Optional[Integer]                 $bond_arp_interval                = undef,
